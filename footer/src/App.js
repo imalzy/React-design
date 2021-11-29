@@ -1,10 +1,10 @@
 import React from 'react'
-
+import { FooterContainer } from './containers/footer'
 const App = () => {
   return (
-    <div>
-        <h1>Hi everyone</h1>
-    </div>
+    <>
+      <FooterContainer/>
+    </>
   )
 }
 
