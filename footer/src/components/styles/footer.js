@@ -18,11 +18,38 @@ export const Wrapper = styled.div`
 `;
 
 export const Row = styled.div`
-    display:flex;flex-direction:column;text-align: left;margin-left:60px
+    display:grid;
+    grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+    grid-gap:20px;
+
+    @media (max-width:1000px){
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    }
 `;
 
-export const Column = styled.div``;
+export const Column = styled.div`
+    display:flex;
+    flex-direction: column;
+    text-align:left;
+    margin-left:60px;
+`;
 
-export const Link = styled.a``;
+export const Link = styled.a`
+    display:block;
+    color:#fff;
+    margin-bottom:20px;
+    font-size:18px;
+    text-decoration:none;
 
-export const Title = styled.h1``;
+    &:hover{
+        color:#ff9c00;
+        transition: 20ms ease-in;
+    }
+`;
+
+export const Title = styled.p`
+    font-size:24px;
+    color:#fff;
+    margin-bottom:40px;
+    font-weight:bold;
+`;
